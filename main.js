@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const btn = document.querySelector("#submit");
     const text = document.getElementsByTagName('textarea')
     const selectOption = document.querySelector("#optionsSelect");
-    let voices = []
+    let voices = [];
 
     // console.log(btn,text);
 
@@ -13,10 +13,10 @@ window.addEventListener('DOMContentLoaded', () => {
             const option = document.createElement('option');
             option.value = voice.name;
             option.textContent = `${voice.name} (${voice.lang})`;
-            console.log(option);
+            // console.log(option);
             selectOption.appendChild(option);
         
-            console.log(voice.name + voice.lang);
+            // console.log(voice.name + voice.lang);
 
         })
      
@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
     
-
     addVoiceList();
+
     btn.addEventListener('click', event => {
         let toSay = text[0].value.trim();
         if(toSay === ''){
@@ -33,18 +33,17 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         else{
             let selectVoice = selectOption.value;
-            // console.log(selectVoice);
+            console.log(selectVoice);
             const utterance = new SpeechSynthesisUtterance(toSay);
             const selectedVoice = voices.find(voice => voice.name === selectVoice);
             if (selectedVoice) {
                 utterance.voice = selectedVoice;
             }
             
-            toSay = '';
             speechSynthesis.speak(utterance);
-
+            toSay = '';
+            event.preventDefault();
         
         }
-            // event.preventDefault();
     });
   });
