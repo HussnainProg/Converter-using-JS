@@ -10,15 +10,22 @@ body{
 header{
     background-color:#222222;
     color: white;
-    border-bottom: 1px solid white;
 }
 
 .navbar-nav{
     margin-left: auto;
 }
 header li{
-    margin: 1rem 1.5rem;
-    padding:1rem 1.5rem;
+    margin: 0.5rem 1rem;
+    /* padding:0rem; */
+    border-radius: 5px;
+}
+
+#navbarNav li a{
+    /* color: aliceblue; */
+    color:white;
+    font-size: large;
+    font-weight: 400;
 }
 #side-menu{
     margin-top: 3rem;
@@ -59,5 +66,5 @@ header li{
 }
 .content-wrapper button{
     position: absolute;
-    right:32%;
+    right:10%;
 } 
