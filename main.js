@@ -19,7 +19,7 @@ function addVoiceList() {
   });
 }
 
-// addVoiceList();
+addVoiceList();
 speechSynthesis.onvoiceschanged = addVoiceList;
 
 btn.addEventListener("click", (event) => {
