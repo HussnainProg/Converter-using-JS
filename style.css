@@ -64,7 +64,13 @@ header li{
     display:block;
     padding:10px;
 }
+.content-wrapper #optionsSelect{
+    width: 50%;
+    /* display: block; */
+
+}
 .content-wrapper button{
     position: absolute;
     right:10%;
+    margin-bottom: 10px;
 } 
