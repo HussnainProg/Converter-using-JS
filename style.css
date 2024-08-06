@@ -74,3 +74,17 @@ header li{
     right:10%;
     margin-bottom: 10px;
 } 
+#text-to-speech{
+    /* border: 1px solid white; */
+    display: block;
+}
+#img-to-text{
+    display:none;
+}
+#output{
+    color: white;
+}
+.remind{
+    color: red;
+    margin-bottom: 2rem;
+}
